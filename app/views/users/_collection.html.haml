@@ -2,9 +2,9 @@
   - results.each do |item|
     %tbody
       %tr
-        %td.center
+        %td.center{style: "width: 100px;"}
           = ResultDecorator.decorate(item).profile_image
-        %td= item.name
-        %td= item.github_url
-        %td.center
+        %td
+          = ResultDecorator.decorate(item).formatted_info
+        %td
           = render 'buttons_actions', user: item

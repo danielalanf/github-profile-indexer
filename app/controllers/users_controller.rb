@@ -34,11 +34,14 @@ class UsersController < ApplicationController
     end
   end
 
+  # PATCH/PUT /users/1
   def update
-    if @profile.update(profile_params)
-      render json: @profile
-    else
-      render json: @profile.errors, status: :unprocessable_entity
+    respond_to do |format|
+      if user_params.present? && @user.update(user_params)
+        format.html { redirect_to @user, notice: "User was successfully updated." }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
     end
   end
 

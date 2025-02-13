@@ -1,8 +1,64 @@
 = render 'shared/navbar'
 
-
-.container.mt-5.mb-5
-  .row
-    .col-md-12
-      .card
-        .card-div.d-flex.flex-column
+.container
+  .main-body
+    %br
+    .row.gutters-sm
+      .col-md-4.mb-3
+        .card
+          .card-body
+            .d-flex.flex-column.align-items-center.text-center
+              -# %img.rounded-circle{alt: "Admin", src: "https://bootdey.com/img/Content/avatar/avatar7.png", width: "150"}/
+              = @user.decorate.profile_image
+              .mt-3
+                %h4= @user.name
+                %p.text-secondary.mb-1= @user.nickname
+                %p.text-muted.font-size-sm= @user.decorate.github_link
+                %p.text-muted.font-size-sm= @user.decorate.organization_with_icon
+      .col-md-8
+        .card.mb-3
+          .card-body
+            .row
+              .col-sm-3
+                %h6.mb-0 Followers
+              .col-sm-9.text-secondary
+                = @user.decorate.followers
+            %hr/
+            .row
+              .col-sm-3
+                %h6.mb-0 Following
+              .col-sm-9.text-secondary
+                = @user.decorate.following
+            %hr/
+            .row
+              .col-sm-3
+                %h6.mb-0 Stars
+              .col-sm-9.text-secondary
+                = @user.decorate.stars
+            %hr/
+            .row
+              .col-sm-3
+                %h6.mb-0 Last Year Contributions
+              .col-sm-9.text-secondary
+                = @user.decorate.last_year_contributions
+            %hr/
+            .row
+              .col-sm-3
+                %h6.mb-0 Location
+              .col-sm-9.text-secondary
+                = @user.decorate.location_with_icon
+            %hr/
+            .row
+              .col-sm-3
+                %h6.mb-0 Profile Image URL
+              .col-sm-9.text-secondary
+                = @user.decorate.image_url
+            %hr/
+            .row
+              .col-sm-12.d-flex.justify-content-end
+                = link_to edit_user_path, class: "btn btn-primary mx-2 custom-buttom" do
+                  Edit
+                = link_to users_path, class: "btn primary-button mx-2 custom-buttom" do
+                  Rescan
+                = link_to users_path, class: "btn btn-secondary mx-2 custom-buttom" do
+                  Back

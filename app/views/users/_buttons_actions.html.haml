@@ -1,13 +1,12 @@
-%td.center
-  %td
-    = link_to user_path(user.id), class: 'icon-link' do
-      %i.fa.fa-eye
-      %span.hidden-text Show
-  %td
-    = link_to edit_user_path(user.id), class: 'icon-link' do
-      %i.fa.fa-edit
-      %span.hidden-text Edit
-  %td
-    = link_to user_path(user.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'icon-link' do
-      %i.fa.fa-trash
-      %span.hidden-text Destroy
+%td.center{style: "width: 60px;"}
+  = link_to user_path(user.id) do
+    %i.fa.fa-eye.text-dark
+    %span.hidden-text Show
+%td.center{style: "width: 60px;"}
+  = link_to edit_user_path(user.id) do
+    %i.fa.fa-edit.text-dark
+    %span.hidden-text Edit
+%td.center{style: "width: 60px;"}
+  = link_to user_path(user.id), method: :delete, data: { confirm: 'Are you sure?' } do
+    %i.fa.fa-trash.text-dark
+    %span.hidden-text Destroy
