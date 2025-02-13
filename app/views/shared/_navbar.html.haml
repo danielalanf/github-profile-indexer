@@ -1,0 +1,26 @@
+-# %nav.navbar.navbar-expand-lg.bg-body-tertiary
+-#   .container-fluid
+-#     %a.navbar-brand Github Profile Indexer
+-#     #navbarSupportedContent.collapse.navbar-collapse
+-#       %ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+-#         %li.nav-item
+-#           %button.btn{ type: 'button', onclick: "window.location.href='#{root_path}'", aria: { current: 'page' } }
+-#             %i.fa-brands.fa-github.fa-2x
+
+
+
+-# %nav.navbar.bg-body-tertiary
+-#   .container-fluid
+-#     %button.btn{ type: 'button', onclick: "window.location.href='#{root_path}'", aria: { current: 'page' } }
+-#       %i.fa-brands.fa-github.fa-2x
+
+
+%nav.navbar.bg-body-tertiary
+  .container-fluid
+    %ul.navbar-nav
+      %li.nav-item
+        %h4.font-weight-bold Github Profile Indexer
+    %ul.navbar-nav
+      %li.nav-item
+        %button.btn.ms-auto{ type: 'button', onclick: "window.location.href='#{root_path}'", aria: { current: 'page' } }
+          %i.fa-brands.fa-github.fa-2x

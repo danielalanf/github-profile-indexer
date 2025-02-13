@@ -1,0 +1,10 @@
+%table.table.table-sm
+  - results.each do |item|
+    %tbody
+      %tr
+        %td.center
+          = ResultDecorator.decorate(item).profile_image
+        %td= item.name
+        %td= item.github_url
+        %td.center
+          = render 'buttons_actions', user: item
