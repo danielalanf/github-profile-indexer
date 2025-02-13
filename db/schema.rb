@@ -26,12 +26,12 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_12_141810) do
 
   create_table "users", force: :cascade do |t|
     t.string "name", null: false
-    t.string "github_url"
+    t.string "github_url", null: false
     t.string "nickname", limit: 50
-    t.integer "followers"
-    t.integer "following"
-    t.integer "stars"
-    t.integer "last_year_contributions", limit: 2
+    t.integer "followers", default: 0
+    t.integer "following", default: 0
+    t.integer "stars", default: 0
+    t.integer "last_year_contributions", default: 0
     t.string "image_url"
     t.string "organization"
     t.string "location"
