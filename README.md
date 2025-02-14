@@ -6,16 +6,16 @@ application up and running.
 Things you may want to cover:
 
 - [Github Profile Indexer](#github-profile-indexer)
-  - [Requisitos do Projeto](#requisitos)
+  - [Requisitos do Projeto](#requisitos-do-projeto)
   - [Pré-Requisitos](#pré-requisitos)
   - [Baixar projeto](#baixar-projeto)
-  - [Instalar versão do Ruby](#instale-elasticsearch)
-  - [Instalar versão do Elasticsearch](#instale-elasticsearch)
-  - [Criação do banco de dados](#criacao-banco-dados)
-  - [Rodar as migrations](#rodar-migrations)
-  - [Instalar as gems](#instalar-gems)
-  - [Rodar o projeto](#rodar-projeto)
-  - [Rodar os testes](#rodar-testes)
+  - [Instalar versão do Ruby](#instalar-versão-do-ruby)
+  - [Instalar versão do Elasticsearch](#instalar-versão-do-elasticsearch)
+  - [Criar banco de dados](#criar-banco-de-dados)
+  - [Rodar migrations](#rodar-migrations)
+  - [Instalar gems](#instalar-gems)
+  - [Rodar projeto](#rodar-projeto)
+  - [Rodar testes](#rodar-testes)
 - [Desenvolvimento](#desenvolvimento)
   - [Ferramentas utilizadas](#ferramentas-utilizadas)
   - [Patterns utilizados](#patterns-utilizados)
@@ -107,25 +107,25 @@ Se tudo estiver correto, você verá uma resposta JSON do Elasticsearch.
 }
 ```
 
-### Criação do banco de dados
+### Criar banco de dados
 
 Executar o comando ```rake db:create```
 
-### Rodar as migrations
+### Rodar migrations
 
 Executar o comando ```rake db:migrate```
 
-### Instalar as gems
+### Instalar gems
 
 Executar o comando ```bundle install```
 
-### Rodar o projeto
+### Rodar projeto
 
 Executar o comando ```rails s```
 
 * O projeto estará disponível na URL *localhost:3000*
 
-### Como rodar os testes
+### Rodar testes
 
 * Para rodar todos os testes completo executar o comando ```rspec```
 * Para rodar uma classe especifica executar o comando ```rspec spec/CAMINHO_ARQUIVO/arquivo.spec```
