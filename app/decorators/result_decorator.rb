@@ -17,7 +17,7 @@ class ResultDecorator < Draper::Decorator
   private
 
   def github_link
-    h.link_to object.github_url, target: "_blank", class: "text-blue fw-bold" do
+    h.link_to object.github_url, target: "_blank", class: "text-blue" do
       h.concat h.content_tag(:i, "", class: "fa-brands fa-github")
       h.concat " "
       h.concat object.github_url

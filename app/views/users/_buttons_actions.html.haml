@@ -1,12 +1,11 @@
-%td.center{style: "width: 60px;"}
-  = link_to user_path(user.id) do
-    %i.fa.fa-eye.text-dark
-    %span.hidden-text Show
-%td.center{style: "width: 60px;"}
-  = link_to edit_user_path(user.id) do
-    %i.fa.fa-edit.text-dark
-    %span.hidden-text Edit
-%td.center{style: "width: 60px;"}
-  = link_to user_path(user.id), data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } do
-    %i.fa.fa-trash.text-dark
-    %span.hidden-text Destroy
+= link_to user_path(user.id), class: "btn btn-outline-primary mx-1" do
+  %i.fa.fa-eye
+  %span.hidden-text Show
+
+= link_to edit_user_path(user.id), class: "btn btn-outline-secondary mx-1" do
+  %i.fa.fa-edit
+  %span.hidden-text Edit
+
+= link_to user_path(user.id), class: "btn btn-outline-danger mx-1", data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } do
+  %i.fa.fa-trash
+  %span.hidden-text Destroy
