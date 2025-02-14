@@ -1,0 +1,12 @@
+= turbo_frame_tag "flash" do
+  - debugger
+  - if success
+    %div{"data-controller" => "flash", "data-flash-text-value" => success, "data-flash-type-value" => "success"}
+  - if error
+    %div{"data-controller" => "flash", "data-flash-text-value" => error, "data-flash-type-value" => "error"}
+  - if warning
+    %div{"data-controller" => "flash", "data-flash-text-value" => warning, "data-flash-type-value" => "warning"}
+  - if info
+    %div{"data-controller" => "flash", "data-flash-text-value" => info, "data-flash-type-value" => "info"}
+  - if question
+    %div{"data-controller" => "flash", "data-flash-text-value" => question, "data-flash-type-value" => "question"}
