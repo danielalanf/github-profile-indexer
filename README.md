@@ -7,25 +7,27 @@ Things you may want to cover:
 
 * Ruby version
 
-* System dependencies
+A versão utilizada para esse projeto é *ruby-3.2.2*
 
-* Configuration
+* Dependencias do sistema
 
-* Database creation
+**Ruby 3.2.2**
+**Elasticsearch 7.17**
+**Postgresql 16.16**
+
+* Configuração
+
+* Criação do banco de dados
 
 * Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Como rodar os testes
 
 * Instale o Elasticsearch
 
 Se você estiver usando o Ubuntu, pode instalá-lo assim:
 
-** Certifique-se de ter o Java 11 ou superior, pois o Elasticsearch 7.x exige isso. **
+**Certifique-se de ter o Java 11 ou superior, pois o Elasticsearch 7.x exige isso.**
 
 Adicione a chave pública do Elasticsearch:
 
@@ -84,3 +86,21 @@ Se tudo estiver correto, você verá uma resposta JSON do Elasticsearch.
   "tagline" : "You Know, for Search"
 }
 ```
+
+* Baixar versão do ruby
+
+Para baixar a versão do ruby usando o rvm
+
+[rvm install](https://rvm.io/rvm/install)
+
+* Alguns Patterns utilizados no projeto
+
+**Service Object**
+
+**Query Object**
+
+**Decorator**
+
+**Filter**
+
+**Factory**
