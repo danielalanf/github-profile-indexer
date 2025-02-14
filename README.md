@@ -5,25 +5,23 @@ application up and running.
 
 Things you may want to cover:
 
-## Ruby version
+### Ruby version
 
 A versão utilizada para esse projeto é *ruby-3.2.2*
 
 ### Dependencias do sistema
 
-**Ruby 3.2.2**
-**Elasticsearch 7.17**
-**Postgresql 16.16**
+*Ruby 3.2.2 *Elasticsearch 7.17 *Postgresql 16.16
 
-#### Configuração
+### Configuração
 
-* Criação do banco de dados
+### Criação do banco de dados
 
-* Database initialization
+### Database initialization
 
-* Como rodar os testes
+### Como rodar os testes
 
-* Instale o Elasticsearch
+### Instale o Elasticsearch
 
 Se você estiver usando o Ubuntu, pode instalá-lo assim:
 
@@ -87,20 +85,20 @@ Se tudo estiver correto, você verá uma resposta JSON do Elasticsearch.
 }
 ```
 
-* Baixar versão do ruby
+### Baixar versão do ruby
 
 Para baixar a versão do ruby usando o rvm
 
 [rvm install](https://rvm.io/rvm/install)
 
-# Alguns Patterns utilizados no projeto
+### Alguns Patterns utilizados no projeto
 
-**Service Object**
+*Service Object
 
-**Query Object**
+*Query Object
 
-**Decorator**
+*Decorator
 
-**Filter**
+*Filter
 
-**Factory**
+*Factory
