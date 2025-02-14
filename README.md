@@ -11,7 +11,9 @@ A versão utilizada para esse projeto é *ruby-3.2.2*
 
 ### Dependencias do sistema
 
-*Ruby 3.2.2 *Elasticsearch 7.17 *Postgresql 16.16
+* **Ruby 3.2.2**
+* **Elasticsearch 7.17**
+* **Postgresql 16.16**
 
 ### Configuração
 
@@ -93,12 +95,12 @@ Para baixar a versão do ruby usando o rvm
 
 ### Alguns Patterns utilizados no projeto
 
-*Service Object
+* Service Object
 
-*Query Object
+* Query Object
 
-*Decorator
+* Decorator
 
-*Filter
+* Filter
 
-*Factory
+* Factory
