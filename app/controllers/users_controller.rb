@@ -46,7 +46,17 @@ class UsersController < ApplicationController
   end
 
   # POST /users/1/rescan
-  def rescan; end
+  def rescan
+    @user.rescanner
+
+    respond_to do |format|
+      if @user.save
+        format.html { redirect_to @user, notice: "User was successfully rescanned." }
+      else
+        format.html { redirect_to @user, alert: "Failed to rescan user." }
+      end
+    end
+  end
 
 
   # DELETE /user/1

@@ -11,6 +11,10 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :github_url, presence: true, format: URI.regexp(%w[http https])
 
+  def rescanner
+    scrapper
+  end
+
   private
 
   def scrapper

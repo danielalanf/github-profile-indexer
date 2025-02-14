@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: fretadao_webscrapper_v2_development
+  database: github_profile_indexer_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: fretadao_webscrapper_v2_test
+  database: github_profile_indexer_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: fretadao_webscrapper_v2_production
-  username: fretadao_webscrapper_v2
-  password: <%= ENV["FRETADAO_WEBSCRAPPER_V2_DATABASE_PASSWORD"] %>
+  database: github_profile_indexer_production
+  username: github_profile_indexer_production
+  password: <%= ENV["GITHUB_PROFILE_INDEXER_DATABASE_PASSWORD"] %>

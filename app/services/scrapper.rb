@@ -14,15 +14,15 @@ class Scrapper
     attributes[:nickname] =
       page.at_xpath("//span[@itemprop='additionalName']")&.text&.strip
     attributes[:image_url] =
-      page.at_xpath("//img[contains(@class, 'avatar-user')]/@src")&.text
+      page.at_xpath("//img[contains(@class, 'avatar-user')]/@src")&.value&.sub(/\?s=\d+&?/, "?")
     attributes[:followers] =
-      page.at_xpath("//a[contains(@href, 'followers')]/span")&.text&.strip&.gsub(/[^\d]/, "")&.to_i
+      page.at_xpath("//a[contains(@href, 'followers')]/span")&.text&.strip&.gsub(/[^\d]/, "").to_i
     attributes[:following] =
       page.at_xpath("//a[contains(@href, 'following')]/span")&.text&.strip.to_i
     attributes[:stars] =
       page.at_xpath("(//a[@data-tab-item = 'stars']/span)[1]")&.text&.strip.to_i
     attributes[:last_year_contributions] =
-      page.at_xpath("//*[@class='js-yearly-contributions']//h2")&.text&.strip&.scan(/\d+/)&.first&.to_i
+      page.at_xpath("//*[@class='js-yearly-contributions']//h2")&.text&.strip&.scan(/\d+/)&.first.to_i
     attributes[:organization] =
       page.at_xpath("//ul[contains(@class, 'vcard-details')]/li[@itemprop='worksFor']//span")&.text&.strip
     attributes[:location] =

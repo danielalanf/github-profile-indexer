@@ -10,7 +10,7 @@ class UserDecorator < Draper::Decorator
 
   def github_link
     h.link_to object.github_url, target: "_blank", class: "text-blue fw-bold" do
-      h.concat h.content_tag(:i, "", class: "fab fa-github")
+      h.concat h.content_tag(:i, "", class: "fa-brands fa-github")
       h.concat " "
       h.concat object.github_url
     end
@@ -48,9 +48,9 @@ class UserDecorator < Draper::Decorator
   def organization_with_icon
     if object.organization.present?
       h.content_tag(:span, class: "organization") do
-        h.concat h.content_tag(:i, "", class: "fas fa-building") # Ícone de organização
-        h.concat " " # Espaço entre o ícone e o texto
-        h.concat object.organization # Nome da organização
+        h.concat h.content_tag(:i, "", class: "fas fa-building")
+        h.concat " "
+        h.concat object.organization
       end
     end
   end

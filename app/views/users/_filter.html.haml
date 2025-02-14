@@ -1,7 +1,7 @@
 .card-div-2
   .px-1
     .search
-      %i.fa.fa-search
+      %i.fa-brands.fa-github
       = simple_form_for @filtro, url: url, method: :get do |form|
         = form.input :params, as: :string, label: false, input_html: { class: "form-control", placeholder: "Search by name, url, nickname, etc" }
         %button.btn.btn-primary{ type: "submit" } Search
