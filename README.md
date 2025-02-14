@@ -5,17 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## Ruby version
 
 A versão utilizada para esse projeto é *ruby-3.2.2*
 
-* Dependencias do sistema
+### Dependencias do sistema
 
 **Ruby 3.2.2**
 **Elasticsearch 7.17**
 **Postgresql 16.16**
 
-* Configuração
+#### Configuração
 
 * Criação do banco de dados
 
@@ -93,7 +93,7 @@ Para baixar a versão do ruby usando o rvm
 
 [rvm install](https://rvm.io/rvm/install)
 
-* Alguns Patterns utilizados no projeto
+# Alguns Patterns utilizados no projeto
 
 **Service Object**
 
