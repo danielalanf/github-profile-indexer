@@ -7,6 +7,6 @@
     %i.fa.fa-edit.text-dark
     %span.hidden-text Edit
 %td.center{style: "width: 60px;"}
-  = link_to user_path(user.id), method: :delete, data: { confirm: 'Are you sure?' } do
+  = link_to user_path(user.id), data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } do
     %i.fa.fa-trash.text-dark
     %span.hidden-text Destroy
