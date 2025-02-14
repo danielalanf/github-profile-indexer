@@ -158,6 +158,8 @@ Executar o comando ```rails s```
 
 ### Imagens
 
+Tela principal
 <img src="/public/telas/index.png">
 
+Exibe um perfil
 <img src="/public/telas/show.png">
