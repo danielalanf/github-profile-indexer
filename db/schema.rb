@@ -37,5 +37,6 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_12_141810) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["github_url"], name: "index_users_on_github_url", unique: true
   end
 end
