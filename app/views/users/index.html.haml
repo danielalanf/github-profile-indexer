@@ -5,29 +5,18 @@
     .col-md-12
       .card
         .card-div.d-flex.flex-column
-          -# %span.d-block.center.custom-margin-bottom
-          -#   %i.fa-brands.fa-github.fa-3x
           %h3.font-weight-bold Find Profiles of Github Users
         = render partial: "filter", locals: { url: users_path }
 
   .row
-    .session
-      .card.card-collection
-        .card-content
-          .row
-            .col.s12.m12.l12
-              - if @results.any?
-                = render "collection", results: @results
-              - else
-                = render "collection_empty"
+    .col-md-12
+      .session
+        .card.card-collection
+          .card-content
+            - if @results.any?
+              = render "collection", results: @results
+            - else
+              = render "collection_empty"
 
 
 = render 'shared/add_button'
-
--# https://invenio.dev.br/conteudos/como-implementar-mensagens-flash-animadas-no-rails-com-turbo
-
--# salvar imagem na versao 7
--# https://pragmaticstudio.com/tutorials/using-active-storage-in-rails
-
-
--# https://bbbootstrap.com/snippets/bootstrap-5-search-bar-microphone-icon-inside-12725910

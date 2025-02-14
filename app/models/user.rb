@@ -9,7 +9,7 @@ class User < ApplicationRecord
   before_save :scrapper
 
   validates :name, presence: true
-  validates :github_url, presence: true, format: URI.regexp(%w[http https])
+  validates :github_url, presence: true, format: URI.regexp(%w[http https]), uniqueness: true
 
   def rescanner
     scrapper

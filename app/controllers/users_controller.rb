@@ -40,9 +40,11 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if user_params.present? && @user.update(user_params)
-        format.html { redirect_to @user, notice: "User was successfully updated." }
+        flash[:success] = "User was successfully updated."
+        format.html { redirect_to @user }
       else
-        format.html { render :edit, status: :unprocessable_entity }
+        flash[:error] = "Failed to update user."
+        format.html { render :edit }
       end
     end
   end
@@ -53,9 +55,11 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: "User was successfully rescanned." }
+        flash[:success] = "User was successfully rescanned."
+        format.html { redirect_to @user }
       else
-        format.html { redirect_to @user, alert: "Failed to rescan user." }
+        flash[:error] = "Failed to rescan user."
+        format.html { redirect_to @user }
       end
     end
   end
