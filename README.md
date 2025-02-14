@@ -17,8 +17,8 @@ Things you may want to cover:
   - [Rodar o projeto](#rodar-projeto)
   - [Rodar os testes](#rodar-testes)
 - [Desenvolvimento](#desenvolvimento)
-  -[Ferramentas utilizadas](#ferramentas-utilizadas)
-  -[Patterns utilizados](#patterns-utilizados)
+  - [Ferramentas utilizadas](#ferramentas-utilizadas)
+  - [Patterns utilizados](#patterns-utilizados)
 
 ### Github Profile Indexer
 
