@@ -2,7 +2,6 @@
 import "@hotwired/turbo-rails"
 import "popper"
 import "bootstrap"
-import "stripe"
 
 import Swal from "sweetalert2"
 window.Swal = Swal
