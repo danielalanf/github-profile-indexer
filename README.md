@@ -5,25 +5,38 @@ application up and running.
 
 Things you may want to cover:
 
-### Ruby version
+- [Github Profile Indexer](#zygo-x)
+  - [Requisitos do Projeto](#requisitos)
+  - [Pré-Requisitos](#pré-requisitos)
+  - [Baixar projeto](#baixar-projeto)
+  - [Instalar versão do Ruby](#instale-elasticsearch)
+  - [Instalar versão do Elasticsearch](#instale-elasticsearch)
+  - [Criação do banco de dados](#criacao-banco-dados)
+  - [Rodar as migrations](#rodar-migrations)
+  - [Instalar as gems](#instalar-gems)
+  - [Rodar os testes](#rodar-testes)
 
-A versão utilizada para esse projeto é *ruby-3.2.2*
 
-### Dependencias do sistema
+### Requisitos do Projeto
+
+
+### Pré-Requisitos
 
 * **Ruby 3.2.2**
 * **Elasticsearch 7.17**
 * **Postgresql 16.16**
 
-### Configuração
+### Baixar projeto
 
-### Criação do banco de dados
+Executar comando ```git clone git@github.com:danielalanf/github-profile-indexer.git```
 
-### Database initialization
+### Instalar versão do Ruby
 
-### Como rodar os testes
+Para baixar a versão do ruby usando o rvm
 
-### Instale o Elasticsearch
+[rvm install](https://rvm.io/rvm/install)
+
+### Instalar versão do Elasticsearch
 
 Se você estiver usando o Ubuntu, pode instalá-lo assim:
 
@@ -87,11 +100,22 @@ Se tudo estiver correto, você verá uma resposta JSON do Elasticsearch.
 }
 ```
 
-### Baixar versão do ruby
+### Criação do banco de dados
 
-Para baixar a versão do ruby usando o rvm
+Executar o comando ```rake db:create```
 
-[rvm install](https://rvm.io/rvm/install)
+### Rodar as migrations
+
+Executar o comando ```rake db:migrate```
+
+### Instalar as gems
+
+Executar o comando ```bundle install```
+
+### Como rodar os testes
+
+* Para rodar todos os testes completo executar o comando ```rspec```
+* Para rodar uma classe especifica executar o comando ```rspec spec/CAMINHO_ARQUIVO/arquivo.spec```
 
 ### Alguns Patterns utilizados no projeto
 
