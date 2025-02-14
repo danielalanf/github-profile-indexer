@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-- [Github Profile Indexer](#zygo-x)
+- [Github Profile Indexer](#github-profile-indexer)
   - [Requisitos do Projeto](#requisitos)
   - [Pré-Requisitos](#pré-requisitos)
   - [Baixar projeto](#baixar-projeto)
@@ -14,8 +14,15 @@ Things you may want to cover:
   - [Criação do banco de dados](#criacao-banco-dados)
   - [Rodar as migrations](#rodar-migrations)
   - [Instalar as gems](#instalar-gems)
+  - [Rodar o projeto](#rodar-projeto)
   - [Rodar os testes](#rodar-testes)
+- [Desenvolvimento](#desenvolvimento)
+  -[Ferramentas utilizadas](#ferramentas-utilizadas)
+  -[Patterns utilizados](#patterns-utilizados)
 
+### Github Profile Indexer
+
+Este projeto é um teste técnico para a empresa Fretadão
 
 ### Requisitos do Projeto
 
@@ -112,12 +119,28 @@ Executar o comando ```rake db:migrate```
 
 Executar o comando ```bundle install```
 
+### Rodar o projeto
+
+Executar o comando ```rails s```
+
+* O projeto estará disponível na URL *localhost:3000*
+
 ### Como rodar os testes
 
 * Para rodar todos os testes completo executar o comando ```rspec```
 * Para rodar uma classe especifica executar o comando ```rspec spec/CAMINHO_ARQUIVO/arquivo.spec```
 
-### Alguns Patterns utilizados no projeto
+### Desenvolvimento
+
+### Ferramentas utilizadas
+
+* Bootstrap
+
+* Fontawesome
+
+* Elasticsearch / searchkick
+
+### Patterns utilizados no projeto
 
 * Service Object
 
