@@ -19,6 +19,7 @@ Things you may want to cover:
 - [Desenvolvimento](#desenvolvimento)
   - [Ferramentas utilizadas](#ferramentas-utilizadas)
   - [Patterns utilizados](#patterns-utilizados)
+- [Imagens](#imagens)
 
 ### Github Profile Indexer
 
@@ -35,7 +36,9 @@ Este projeto é um teste técnico para a empresa Fretadão
 
 ### Baixar projeto
 
-Executar comando ```git clone git@github.com:danielalanf/github-profile-indexer.git```
+Executar comando
+
+```git clone git@github.com:danielalanf/github-profile-indexer.git```
 
 ### Instalar versão do Ruby
 
@@ -151,3 +154,10 @@ Executar o comando ```rails s```
 * Filter
 
 * Factory
+
+
+### Imagens
+
+<img src="/public/telas/index.png">
+
+<img src="/public/telas/show.png">
