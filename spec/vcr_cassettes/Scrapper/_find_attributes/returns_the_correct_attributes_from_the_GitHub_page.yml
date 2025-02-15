@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://github.com/ms-diego-wolff
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sat, 15 Feb 2025 14:30:18 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Vary:
+      - X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept,
+        X-Requested-With
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self';
+        img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'
+      Set-Cookie:
+      - _gh_sess=rF8n4aezGMMsrjt8GGQ0GwHSoaecvawZbDeRvHSvPQoZs82JiLz4Y5EnLsqyZt93K1Tl6GB7XXnGlaY90F3giHYHZIxleDp%2BIv2ADxqqwVWG3rYr7cYbYiYks%2FH2uQuFJf88BIgg5P6UqQIGQx8CD0FCnE9PrS5TWU5tIDcidH206CON%2FjJSIcVkA4J1Q2KvZ4TCcAfr17uoE%2BUBuY7Mezr8Ro%2FOtJxWdQq3m%2FqMAnx8qg30DYi4ZKhKTk3R%2FZD%2BaHDFkSjlpkkVuFreT5frvg%3D%3D--UlpVCkyRRM2Yvsbv--x4JteexAfcYHzCd3AAw5bg%3D%3D;
+        Path=/; HttpOnly; Secure; SameSite=Lax
+      - _octo=GH1.1.1333068911.1739629818; Path=/; Domain=github.com; Expires=Sun,
+        15 Feb 2026 14:30:18 GMT; Secure; SameSite=Lax
+      - logged_in=no; Path=/; Domain=github.com; Expires=Sun, 15 Feb 2026 14:30:18
+        GMT; HttpOnly; Secure; SameSite=Lax
+      Content-Length:
+      - '9'
+      X-Github-Request-Id:
+      - CA18:14BCCA:713630:91B2A7:67B0A4FA
+    body:
+      encoding: ASCII-8BIT
+      string: Not Found
+  recorded_at: Sat, 15 Feb 2025 14:30:18 GMT
+recorded_with: VCR 6.3.1

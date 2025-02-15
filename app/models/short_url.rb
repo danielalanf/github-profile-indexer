@@ -24,7 +24,11 @@ class ShortUrl < ApplicationRecord
   end
 
   def self.generate_slug(short_url)
-    short_url.slug = SecureRandom.base36(8)
-    short_url.save!
+    begin
+      short_url.slug = SecureRandom.base36(8)
+      short_url.save!
+    rescue ActiveRecord::RecordNotUnique
+      retry
+    end
   end
 end

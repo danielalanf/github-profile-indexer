@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :github_url, presence: true, format: URI.regexp(%w[http https]), uniqueness: true
+  validate :github_url_exists
 
   def rescanner
     scrapper
@@ -26,9 +27,18 @@ class User < ApplicationRecord
   end
 
   def scrapper
-    scrapper = Scrapper.new(github_url: original_github_url)
+    scrapper = Scrapper.new(github_url: original_github_url, user: self)
     self.attributes = self.attributes.merge(
         scrapper.find_attributes
     )
+  end
+
+  def github_url_exists
+    response = HTTParty.get(github_url)
+    if response.code == 404
+      errors.add(:github_url, "profile not exist on github")
+    end
+  rescue StandardError => e
+    errors.add(:github_url, "could not be verified: #{e.message}")
   end
 end

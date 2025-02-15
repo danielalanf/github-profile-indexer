@@ -12,8 +12,6 @@
             %br
             .form-group
               .col-sm-12
-                -# @ TODO trazer o original_github_url no form de edit
-                - debugger
                 = form.input :github_url, required: true, input_html: { class: 'form-control', value: @user.new_record? ? nil : @user.original_github_url }
 
             %br
