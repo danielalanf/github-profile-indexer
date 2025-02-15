@@ -23,8 +23,6 @@ gem "shorturl"
 gem "httparty"
 # Parses HTML and XML
 gem "nokogiri"
-# Shortens URLs
-gem "bitly"
 # Use for searching
 gem "searchkick"
 gem "elasticsearch", "~> 7"

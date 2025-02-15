@@ -10,18 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_12_141810) do
+ActiveRecord::Schema[7.2].define(version: 2025_02_14_193000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "bitlinks", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.string "short_url"
-    t.string "long_url"
+  create_table "short_urls", force: :cascade do |t|
+    t.string "long_url", null: false
+    t.string "slug", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["long_url"], name: "index_bitlinks_on_long_url", unique: true
-    t.index ["user_id"], name: "index_bitlinks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

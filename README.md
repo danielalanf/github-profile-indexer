@@ -19,6 +19,7 @@ Things you may want to cover:
 - [Desenvolvimento](#desenvolvimento)
   - [Ferramentas utilizadas](#ferramentas-utilizadas)
   - [Patterns utilizados](#patterns-utilizados)
+- [Encurtador de URL](#encurtador-de-url)
 - [Imagens](#imagens)
 
 ### Github Profile Indexer
@@ -143,11 +144,15 @@ Executar o comando ```rails s```
 
 * Elasticsearch / searchkick
 
+* HAML
+
 ### Patterns utilizados no projeto
 
 * Service Object
 
 * Query Object
+
+* Concern
 
 * Decorator
 
@@ -155,6 +160,18 @@ Executar o comando ```rails s```
 
 * Factory
 
+### Encurtador de URL
+
+O encurtador de URL foi implementado dentro do projeto e consiste em
+
+* Uma tabela chamada short_urls que possui duas colunas long_ul e slug
+
+A estratégia foi pensada para atender
+
+* A exibição correta na tela de edição do User
+* Link gerado para as telas de exibição, que exibe a url encurtada e redireciona para o perfil correto do Github
+* Não precisa de requisições externas
+* Financeiramente viável pois não tem custo.
 
 ### Imagens
 

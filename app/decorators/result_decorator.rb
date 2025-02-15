@@ -17,10 +17,15 @@ class ResultDecorator < Draper::Decorator
   private
 
   def github_link
-    h.link_to object.github_url, target: "_blank", class: "text-blue" do
+    h.link_to original_github_url(object.github_url), target: "_blank", class: "text-blue" do
       h.concat h.content_tag(:i, "", class: "fa-brands fa-github")
       h.concat " "
       h.concat object.github_url
     end
+  end
+
+  def original_github_url(url)
+    slug = url.split("/").last
+    ShortUrl.find_by(slug: slug)&.long_url
   end
 end

@@ -3,10 +3,8 @@
 class User < ApplicationRecord
   include UserConcern
 
-  has_one :bitlink
-
   after_commit :reindex, on: [ :create, :update, :destroy ]
-  before_save :scrapper
+  before_save :generate_shortner_url, :scrapper
 
   validates :name, presence: true
   validates :github_url, presence: true, format: URI.regexp(%w[http https]), uniqueness: true
@@ -15,10 +13,20 @@ class User < ApplicationRecord
     scrapper
   end
 
+  def original_github_url
+    slug = self.github_url.split("/").last
+    ShortUrl.find_by(slug: slug)&.long_url
+  end
+
   private
 
+  def generate_shortner_url
+    return unless self.github_url_changed?
+    self.github_url = ShortUrl.generate(self.github_url)
+  end
+
   def scrapper
-    scrapper = Scrapper.new(github_url: github_url)
+    scrapper = Scrapper.new(github_url: original_github_url)
     self.attributes = self.attributes.merge(
         scrapper.find_attributes
     )
