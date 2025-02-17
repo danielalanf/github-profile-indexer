@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://github.com/invalid_user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 17 Feb 2025 17:32:37 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Vary:
+      - X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept,
+        X-Requested-With
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self';
+        img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'
+      Set-Cookie:
+      - _gh_sess=ojFslu1Wo%2BQT92DitbW40l804kYViMbzuRAD%2Bc%2BcwveSHEU4bX57PnWILnBrgUep0J0Y5E4dW6Z6qknISgVFxsvcxo0RP%2Bx%2FERSI1D80W1w0Zp2oW0JrJfbufJ%2Fbb0kZLuai%2BU2wxfpBdYT5Pcwj2w7T2u%2FC66MFxQsUQ7lYOH6zNX8bju2UQvBF21GGNjJeHpkTb%2Brfwi27JTq%2FOP7gkfJK%2BAqcB13g7kA7oWZcb6xWxzXLcIseh8nLOPElc3mMFdKwnaXLwGS6TCMpDAwhoQ%3D%3D--%2FIeisDLZxGBqA7wD--hzHVngqNVNTPO0p%2BFNOdoA%3D%3D;
+        Path=/; HttpOnly; Secure; SameSite=Lax
+      - _octo=GH1.1.1908146175.1739813557; Path=/; Domain=github.com; Expires=Tue,
+        17 Feb 2026 17:32:37 GMT; Secure; SameSite=Lax
+      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 17 Feb 2026 17:32:37
+        GMT; HttpOnly; Secure; SameSite=Lax
+      Content-Length:
+      - '9'
+      X-Github-Request-Id:
+      - A208:2D5C58:1E2BE4B:263531A:67B372B5
+    body:
+      encoding: ASCII-8BIT
+      string: Not Found
+  recorded_at: Mon, 17 Feb 2025 17:32:37 GMT
+- request:
+    method: get
+    uri: https://github.com/invalid_user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 17 Feb 2025 17:32:37 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Vary:
+      - X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept,
+        X-Requested-With
+      Cache-Control:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - '0'
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self';
+        img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'
+      Set-Cookie:
+      - _gh_sess=cuZqqC4%2FXZ14aOnso8sIdodN3yNA4%2B4X7XOz6IbU%2BCOwrKDnKJxDvmm25dDKAoRFehLV64oI%2F2HFT5BSShrslesK1mRna5q43aEJQ8lz7dssMJzXMXDaWZCj%2FUGN8pMEJ8cr%2B1iOyS5T%2BaqRHCbXaKmR1Tmxg8FTAWU2n89kmR6g5nfiiBj1Ndq1rY%2FpA6LQpMGX7M3mtVUvKMjPDssQhUNjre9eB6ASU5R%2FJbVWm6R5aY6eEvi84xH%2FT5wIChNMNRYZV%2Fpw0ZcVbWQFylxdfw%3D%3D--yScC3BK3M7hyoeXb--wggfWH9wKXjU4DK1KB%2B22Q%3D%3D;
+        Path=/; HttpOnly; Secure; SameSite=Lax
+      - _octo=GH1.1.1944158029.1739813571; Path=/; Domain=github.com; Expires=Tue,
+        17 Feb 2026 17:32:51 GMT; Secure; SameSite=Lax
+      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 17 Feb 2026 17:32:51
+        GMT; HttpOnly; Secure; SameSite=Lax
+      Content-Length:
+      - '9'
+      X-Github-Request-Id:
+      - A7EE:386A7C:F1B2E7:12C4553:67B372C3
+    body:
+      encoding: ASCII-8BIT
+      string: Not Found
+  recorded_at: Mon, 17 Feb 2025 17:32:51 GMT
+recorded_with: VCR 6.3.1

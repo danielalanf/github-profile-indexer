@@ -4,70 +4,86 @@ RSpec.describe User, type: :model do
   let(:user) { create(:user) }
 
   describe "validations" do
-    it "is valid with a name and a valid, unique github_url" do
+    let(:invalid_user) { build(:user, :invalid_github) }
+    let(:valid_user) { build(:user, :valid_github) }
+
+    it { should validate_presence_of(:name) }
+    it { should validate_presence_of(:github_url) }
+
+    it "valida uniqueness de github_url" do
+      user
+      should validate_uniqueness_of(:github_url)
+    end
+
+    it "permite URLs válidas" do
       expect(user).to be_valid
     end
 
-    it "is not valid without a name" do
-      user.name = nil
-      expect(user).to_not be_valid
+    it "não permite URLs inválidas" do
+      expect(invalid_user).to_not be_valid
+    end
+  end
+
+  describe "callbacks" do
+    let(:new_user) { build(:user, :valid_github) }
+
+    it "chama reindex após criar, atualizar ou excluir" do
+      expect(user).to receive(:reindex)
+      user.run_callbacks(:commit)
     end
 
-    it "is not valid without a github_url" do
-      user.github_url = nil
-      expect(user).to_not be_valid
+    it "chama generate_shortner_url antes de salvar" do
+      expect(new_user).to receive(:generate_shortner_url)
+      new_user.run_callbacks(:save)
     end
 
-    it "is not valid with an invalid github_url" do
-      user.github_url = "invalid_url"
-      expect(user).to_not be_valid
-    end
-
-    it "is not valid with a non-unique github_url" do
-      create(:user, github_url: "https://github.com/unique_user")
-      user.github_url = "https://github.com/unique_user"
-      expect(user).to_not be_valid
+    it "chama scrapper antes de salvar" do
+      expect(new_user).to receive(:scrapper)
+      new_user.run_callbacks(:save)
     end
   end
 
   describe "#rescanner" do
-    it "calls the scrapper method" do
+    it "chama o método scrapper" do
       expect(user).to receive(:scrapper)
       user.rescanner
     end
   end
 
   describe "#original_github_url" do
-    it "returns the original github_url from the slug" do
-      create(:short_url, long_url: "https://github.com/johndoe", slug: "johndoe")
-      user.github_url = "https://tinyurl.com/johndoe"
-      expect(user.original_github_url).to eq("https://github.com/johndoe")
+    let(:short_url) { ShortUrl.find_by(slug: user.github_url.split("/").last) }
+    let(:github_url) { short_url.long_url }
+
+    it "retorna a URL original do GitHub a partir do encurtador" do
+      expect(user.original_github_url).to eq(github_url)
+    end
+
+    it "retorna nil se a URL encurtada não for encontrada" do
+      short_url.destroy
+
+      expect(user.original_github_url).to be_nil
     end
   end
 
-  describe "callbacks" do
-    it "calls generate_shortner_url before save" do
-      expect(user).to receive(:generate_shortner_url)
-      user.save
+  describe "#github_url_exists", vcr: { cassette_name: "github_profile" } do
+    context "quando o perfil do GitHub existe" do
+      it "não adiciona erro ao usuário" do
+        VCR.use_cassette("github_profile_exists") do
+          user.valid?
+          expect(user.errors[:base]).to be_empty
+        end
+      end
     end
 
-    it "calls scrapper before save" do
-      expect(user).to receive(:scrapper)
-      user.save
-    end
-  end
+    context "quando o perfil do GitHub não existe" do
+      let(:invalid_user) { build(:user, :invalid_github) }
 
-  describe "github_url_exists" do
-    it "adds an error if the github_url does not exist" do
-      allow(HTTParty).to receive(:get).and_return(double(code: 404))
-      user.github_url_exists
-      expect(user.errors[:github_url]).to include("does not exist")
-    end
-
-    it "does not add an error if the github_url exists" do
-      allow(HTTParty).to receive(:get).and_return(double(code: 200))
-      user.github_url_exists
-      expect(user.errors[:github_url]).to be_empty
+      it "adiciona erro ao usuário" do
+        VCR.use_cassette("github_profile_not_found") do
+          invalid_user.valid?
+          expect(invalid_user.errors[:base]).to include("profile not exist on github")
+        end
+      end
     end
   end
 end

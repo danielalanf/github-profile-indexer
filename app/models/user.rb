@@ -27,6 +27,7 @@ class User < ApplicationRecord
   end
 
   def scrapper
+    return unless original_github_url
     scrapper = Scrapper.new(github_url: original_github_url, user: self)
     self.attributes = self.attributes.merge(
         scrapper.find_attributes
@@ -34,11 +35,12 @@ class User < ApplicationRecord
   end
 
   def github_url_exists
-    response = HTTParty.get(github_url)
+    url = self.new_record? ? self.github_url : self.original_github_url
+    response = HTTParty.get(url)
     if response.code == 404
-      errors.add(:github_url, "profile not exist on github")
+      errors.add(:base, "profile not exist on github")
     end
   rescue StandardError => e
-    errors.add(:github_url, "could not be verified: #{e.message}")
+    errors.add(:base, "could not be verified: #{e.message}")
   end
 end
