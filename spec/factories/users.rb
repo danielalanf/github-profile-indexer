@@ -18,4 +18,16 @@ FactoryBot.define do
       "https://github.com/defunkt"
     ].sample }
   end
+
+  trait :complete do
+    name { "Tom Preston-Werner" }
+    github_url { "https://github.com/mojombo" }
+    image_url { "https://avatars.githubusercontent.com/u/1?v=4" }
+    followers { 24198 }
+    following { 11 }
+    stars { 160 }
+    last_year_contributions { 0 }
+    location { "San Francisco" }
+    organization { "@chatterbugapp, @redwoodjs, @preston-werner-ventures" }
+  end
 end
