@@ -147,8 +147,6 @@ Executar o comando ```rails s```
 
 ### Desenvolvimento
 
-* **Dockerizar** o projeto para facilitar a gestão do ambiente de desenvolvimento, além de melhorar a escalabilidade e o gerenciamento das dependências do sistema, criando um fluxo de trabalho mais eficiente tanto para desenvolvimento quanto para deploy em produção.
-
 ### Ferramentas utilizadas
 
 * Bootstrap
@@ -187,6 +185,10 @@ A estratégia foi pensada para atender
 * Financeiramente viável pois não tem custo.
 
 ### Melhorias
+
+* **Dockerizar** o projeto para facilitar a gestão do ambiente de desenvolvimento, além de melhorar a escalabilidade e o gerenciamento das dependências do sistema, criando um fluxo de trabalho mais eficiente tanto para desenvolvimento quanto para deploy em produção.
+
+* **Webscrapper** no desenvolvimento do projeto foi utilizado a gem nokogiri para percorrer os atributos, a princípio os testes passavam pois o perfil escolhido não tinha contribuições no último ano, ao encontrar um perfil com valores maiores que 0 ocorreu o erro, o atributo last_year_contributions é carregado de forma assíncrona, foi observado que o GitHub está utilizando um <include-fragment> com um src dinâmico e o conteúdo não pode ser extraído, uma solução seria usar a gem selenium-webdriver para carregar o conteúdo e assim extrair corretamente
 
 ### Imagens
 
