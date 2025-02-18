@@ -20,6 +20,7 @@ Things you may want to cover:
   - [Ferramentas utilizadas](#ferramentas-utilizadas)
   - [Patterns utilizados](#patterns-utilizados)
 - [Encurtador de URL](#encurtador-de-url)
+- [Melhorias](#melhorias)
 - [Imagens](#imagens)
 
 ### Github Profile Indexer
@@ -146,6 +147,8 @@ Executar o comando ```rails s```
 
 ### Desenvolvimento
 
+* **Dockerizar** o projeto para facilitar a gestão do ambiente de desenvolvimento, além de melhorar a escalabilidade e o gerenciamento das dependências do sistema, criando um fluxo de trabalho mais eficiente tanto para desenvolvimento quanto para deploy em produção.
+
 ### Ferramentas utilizadas
 
 * Bootstrap
@@ -182,6 +185,8 @@ A estratégia foi pensada para atender
 * Link gerado para as telas de exibição, que exibe a url encurtada e redireciona para o perfil correto do Github
 * Não precisa de requisições externas
 * Financeiramente viável pois não tem custo.
+
+### Melhorias
 
 ### Imagens
 
