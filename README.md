@@ -31,8 +31,9 @@ Desenvolvido para um teste técnico da empresa Fretadão.
 ### Requisitos do Projeto
 
 
-| Nome | Descrição | |----------|:-------------:|
-| Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github | |----------|:-------------:|
+| Nome | Descrição |
+|----------|:-------------|
+| Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github |
 
 
 ### Pré-Requisitos
