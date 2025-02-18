@@ -83,7 +83,7 @@ RSpec.describe User, type: :model do
       it "adiciona erro ao usuário" do
         VCR.use_cassette("github_profile_not_found") do
           invalid_user.valid?
-          expect(invalid_user.errors[:base]).to include("profile not exist on github")
+          expect(invalid_user.errors[:github_url]).to include("profile not exist on github")
         end
       end
     end

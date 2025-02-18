@@ -37,7 +37,7 @@ class User < ApplicationRecord
   def github_url_exists
     response = HTTParty.get(self.github_url)
     if response.code == 404
-      errors.add(:base, "profile not exist on github")
+      errors.add(:github_url, "profile not exist on github")
     end
   rescue StandardError => e
     errors.add(:base, "could not be verified: #{e.message}")
