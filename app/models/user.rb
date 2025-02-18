@@ -3,12 +3,12 @@
 class User < ApplicationRecord
   include UserConcern
 
-  after_commit :reindex, on: [ :create, :update, :destroy ]
-  before_save :generate_shortner_url, :scrapper
-
   validates :name, presence: true
   validates :github_url, presence: true, format: URI.regexp(%w[http https]), uniqueness: true
   validate :github_url_exists
+
+  after_commit :reindex, on: [ :create, :update, :destroy ]
+  before_save :generate_shortner_url, :scrapper
 
   def rescanner
     scrapper
