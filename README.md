@@ -35,6 +35,7 @@ Desenvolvido para um teste técnico da empresa Fretadão.
 |----------|:-------------|
 | Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github |
 | Webscrapper| Quando o cadastro de um novo membro for realizado, então através de um webscarpper deve-se recuperar e armazenar da pagina do Github as informações: <br> &nbsp;&nbsp; * Nome de usuário do Github <br> &nbsp;&nbsp; * Número de Followers <br> &nbsp;&nbsp; * Número de Following <br> &nbsp;&nbsp; * Número de Stars <br> &nbsp;&nbsp; * Número de contribuições no último ano <br> &nbsp;&nbsp; * URL da imagem de perfil <br> &nbsp;&nbsp; * Email <br> &nbsp;&nbsp; * Localização |
+|Encurtamento de URLs| Ao cadastrar um perfil, a URL do Github deverá ser armazenada de forma encurtada, por exemplo, https://bitly.com/. |
 
 ### Pré-Requisitos
 
