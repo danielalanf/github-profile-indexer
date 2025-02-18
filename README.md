@@ -213,8 +213,10 @@ A estratégia foi pensada para atender
 
 ### Imagens
 
-Tela principal
+* **Tela principal**
+
 <img src="/public/telas/index.png">
 
-Exibe um perfil
+* **Exibe um perfil**
+
 <img src="/public/telas/show.png">
