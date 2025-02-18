@@ -17,7 +17,7 @@ Things you may want to cover:
   - [Rodar projeto](#rodar-projeto)
   - [Rodar testes](#rodar-testes)
 - [Desenvolvimento](#desenvolvimento)
-  - [Ferramentas utilizadas](#ferramentas-utilizadas)
+  - [Justificativas](#justificativas)
   - [Patterns utilizados](#patterns-utilizados)
 - [Encurtador de URL](#encurtador-de-url)
 - [Melhorias](#melhorias)
@@ -42,9 +42,9 @@ Desenvolvido para um teste técnico da empresa Fretadão.
 
 ### Pré-Requisitos
 
-* **Ruby 3.2.2**
-* **Elasticsearch 7.17**
-* **Postgresql 16.16**
+* *Ruby 3.2.2*
+* *Elasticsearch 7.17*
+* *Postgresql 16.16*
 
 ### Baixar projeto
 
@@ -147,15 +147,31 @@ Executar o comando ```rails s```
 
 ### Desenvolvimento
 
-### Ferramentas utilizadas
 
-* Bootstrap
 
-* Fontawesome
+### Justificativas
+
+* Postgres
+
+A escolha do PostgreSQL para o projeto se baseou em sua robustez, escalabilidade e compatibilidade com as necessidades do sistema, garantindo uma base sólida para o crescimento e evolução da aplicação.
 
 * Elasticsearch / searchkick
 
-* HAML
+Utilizei Elasticsearch com a gem Searchkick para melhorar a performance e a precisão das buscas no projeto. Diferente das consultas tradicionais em banco de dados, o Elasticsearch permite realizar buscas *full-text*, sugestões automáticas e filtros avançados de forma rápida e eficiente. Além disso, ele é altamente escalável e pode lidar com grandes volumes de dados sem comprometer o desempenho.
+
+O Searchkick foi escolhido por facilitar a integração do Elasticsearch com o ActiveRecord, permitindo indexar os dados automaticamente e executar buscas de maneira intuitiva dentro do Rails. Com isso, conseguimos melhorar a experiência do usuário, tornando as pesquisas mais rápidas e relevantes.
+
+* Bootstrap
+
+Utilizei o Bootstrap no projeto para facilitar a estilização e garantir um design responsivo sem precisar escrever muito CSS manualmente. O framework oferece uma estrutura pronta com grid flexível, componentes reutilizáveis e classes utilitárias que agilizam o desenvolvimento. Além disso, ele garante compatibilidade entre diferentes navegadores e melhora a experiência do usuário em dispositivos móveis. Dessa forma, foi possível criar um layout bonito e organizado de forma rápida e eficiente.
+
+* Fontawesome
+
+Utilizei o FontAwesome no projeto para adicionar ícones de forma prática e estilizada, sem precisar criar ou importar imagens manualmente. Ele oferece uma grande variedade de ícones personalizáveis, facilitando a criação de uma interface mais intuitiva e visualmente agradável. Além disso, como os ícones são vetoriais, eles mantêm a qualidade em qualquer tamanho e carregam rapidamente, contribuindo para a performance do site.
+
+* Sweet Alert
+
+Utilizei o SweetAlert no projeto para exibir alertas mais bonitos e interativos, substituindo os pop-ups padrão do navegador. Ele permite personalizar cores, ícones e botões, melhorando a experiência do usuário. Além disso, é fácil de integrar e usar, tornando as notificações mais visuais e intuitivas.
 
 ### Patterns utilizados no projeto
 
@@ -186,9 +202,9 @@ A estratégia foi pensada para atender
 
 ### Melhorias
 
-* **Dockerizar** o projeto para facilitar a gestão do ambiente de desenvolvimento, além de melhorar a escalabilidade e o gerenciamento das dependências do sistema, criando um fluxo de trabalho mais eficiente tanto para desenvolvimento quanto para deploy em produção.
+* **Dockerizar:** o projeto para facilitar a gestão do ambiente de desenvolvimento, além de melhorar a escalabilidade e o gerenciamento das dependências do sistema, criando um fluxo de trabalho mais eficiente tanto para desenvolvimento quanto para deploy em produção.
 
-* **Webscrapper** no desenvolvimento do projeto foi utilizado a gem nokogiri para percorrer os atributos, a princípio os testes passavam pois o perfil escolhido não tinha contribuições no último ano, ao encontrar um perfil com valores maiores que 0 ocorreu o erro, o atributo last_year_contributions é carregado de forma assíncrona, foi observado que o GitHub está utilizando um <include-fragment> com um src dinâmico e o conteúdo não pode ser extraído, uma solução seria usar a gem selenium-webdriver para carregar o conteúdo e assim extrair corretamente
+* **Webscraper:** Durante o desenvolvimento do projeto, utilizamos a gem Nokogiri para extrair atributos do perfil do GitHub. Inicialmente, os testes passaram sem problemas, pois o perfil escolhido não possuía contribuições no último ano. No entanto, ao testar com um perfil que possuía contribuições maiores que zero, um erro ocorreu. Descobrimos que o atributo last_year_contributions é carregado de forma assíncrona, e o GitHub utiliza um *include-fragment* com um src dinâmico, impedindo a extração direta do conteúdo. Para solucionar esse problema, uma abordagem seria utilizar a gem **selenium-webdriver**, permitindo carregar o conteúdo dinamicamente antes da extração dos dados.
 
 ### Imagens
 
