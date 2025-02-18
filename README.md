@@ -32,7 +32,7 @@ Desenvolvido para um teste técnico da empresa Fretadão.
 
 
 | Nome | Descrição |
-|----------|:-------------:|
+|----------|:-------------|
 | Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github |
 | Webscrapper| Quando o cadastro de um novo membro for realizado, então através de um webscarpper deve-se recuperar e armazenar da pagina do Github as informações: <br> * Nome de usuário do Github <br> * Número de Followers <br> * Número de Following <br> * Número de Stars <br> * Número de contribuições no último ano <br> * URL da imagem de perfil <br> * Email <br> * Localização |
 
