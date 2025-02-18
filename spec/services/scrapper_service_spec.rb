@@ -7,7 +7,7 @@ RSpec.describe Scrapper, type: :service do
 
   describe '#find_attributes', :vcr do
     it 'returns the correct attributes from the GitHub page' do
-      VCR.use_cassette('github_profile_exist') do
+      VCR.use_cassette('github_profile_exists') do
         attributes = scrapper.find_attributes
 
         expect(attributes).to include(

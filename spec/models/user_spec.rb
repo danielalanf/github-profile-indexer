@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
     end
 
     it "permite URLs válidas" do
-      expect(user).to be_valid
+      expect(valid_user).to be_valid
     end
 
     it "não permite URLs inválidas" do
@@ -67,10 +67,12 @@ RSpec.describe User, type: :model do
 
   describe "#github_url_exists", vcr: { cassette_name: "github_profile" } do
     context "quando o perfil do GitHub existe" do
+      let(:octocat) { build(:user) }
+
       it "não adiciona erro ao usuário" do
         VCR.use_cassette("github_profile_exists") do
-          user.valid?
-          expect(user.errors[:base]).to be_empty
+          octocat.valid?
+          expect(octocat.errors[:base]).to be_empty
         end
       end
     end
