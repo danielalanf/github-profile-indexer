@@ -56,7 +56,7 @@ RSpec.describe UsersController, type: :controller do
   describe "PATCH #update" do
     context "com parâmetros válidos" do
       it "atualiza o usuário" do
-        patch :update, params: { id: user.id, user: { name: "Novo Nome" } }
+        patch :update, params: { id: user.id, user: { name: "Novo Nome", github_url: user.original_github_url } }
         user.reload
         expect(user.name).to eq("Novo Nome")
       end

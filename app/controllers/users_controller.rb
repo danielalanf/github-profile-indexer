@@ -54,7 +54,7 @@ class UsersController < ApplicationController
     @user.rescanner
 
     respond_to do |format|
-      if @user.save
+      if @user.save(validate: false)
         flash[:success] = "User was successfully rescanned."
         format.html { redirect_to @user }
       else
