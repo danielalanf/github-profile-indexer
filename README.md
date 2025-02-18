@@ -43,6 +43,7 @@ Desenvolvido para um teste técnico da empresa Fretadão.
 * URL da imagem de perfil
 * Email
 * Localização
+|
 
 
 ### Pré-Requisitos
