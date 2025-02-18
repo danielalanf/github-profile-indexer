@@ -24,7 +24,7 @@ Things you may want to cover:
 
 ### Github Profile Indexer
 
-Esse projeto é um webscraper em Ruby on Rails que completa as informações de um perfil do GitHub a partir da URL do usuário
+Esse projeto é um webscraper em Ruby on Rails que completa as informações de um perfil do GitHub a partir da URL do usuário.
 
 Desenvolvido para um teste técnico da empresa Fretadão.
 
@@ -33,9 +33,11 @@ Desenvolvido para um teste técnico da empresa Fretadão.
 
 | Nome | Descrição |
 |----------|:-------------|
-| Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github |
+| Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github. |
 | Webscrapper| Quando o cadastro de um novo membro for realizado, então através de um webscarpper deve-se recuperar e armazenar da pagina do Github as informações: <br> &nbsp;&nbsp; * Nome de usuário do Github <br> &nbsp;&nbsp; * Número de Followers <br> &nbsp;&nbsp; * Número de Following <br> &nbsp;&nbsp; * Número de Stars <br> &nbsp;&nbsp; * Número de contribuições no último ano <br> &nbsp;&nbsp; * URL da imagem de perfil <br> &nbsp;&nbsp; * Email <br> &nbsp;&nbsp; * Localização |
 |Encurtamento de URLs| Ao cadastrar um perfil, a URL do Github deverá ser armazenada de forma encurtada, por exemplo, https://bitly.com/. |
+|Re-escanear| Após cadastrado, também deve ser possível escanear (de forma manual) o perfil do Github em busca de novas informações que possam ter sido adicionadas. |
+| Interface de Usuário | Implementar o front-end da tela de busca e perfil <br> &nbsp;&nbsp; * A página principal do sistema deverá exibir um campo de busca. <br> &nbsp;&nbsp; * A busca poderá ser preenchida com qualquer informação do perfil (nome, usuário do Github, organização, localização, etc). |
 
 ### Pré-Requisitos
 
