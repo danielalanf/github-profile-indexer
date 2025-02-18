@@ -24,13 +24,15 @@ Things you may want to cover:
 
 ### Github Profile Indexer
 
-Esse projeto é um webscraper em Ruby on Rails que completa as informações de um perfil do GitHub a partir da URL do usuário desenvolvido para um teste técnico para a empresa Fretadão.
+Esse projeto é um webscraper em Ruby on Rails que completa as informações de um perfil do GitHub a partir da URL do usuário
+
+Desenvolvido para um teste técnico da empresa Fretadão.
 
 ### Requisitos do Projeto
 
 
-| Nome | Descrição |
-| Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github
+| Nome | Descrição | |----------|:-------------:|
+| Cadastro de Perfis | Deve-se haver uma página para cadastrar um nome e o endereço da página de perfil do Github | |----------|:-------------:|
 
 
 ### Pré-Requisitos
