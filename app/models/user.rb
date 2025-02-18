@@ -35,8 +35,7 @@ class User < ApplicationRecord
   end
 
   def github_url_exists
-    url = self.new_record? ? self.github_url : self.original_github_url
-    response = HTTParty.get(url)
+    response = HTTParty.get(self.github_url)
     if response.code == 404
       errors.add(:base, "profile not exist on github")
     end
