@@ -25,7 +25,7 @@ gem "httparty"
 gem "nokogiri"
 # Use for searching
 gem "searchkick"
-gem "elasticsearch", "~> 7"
+gem "elasticsearch", "~> 8"
 
 gem "bootstrap", "~> 5.3.0"
 gem "sassc-rails"
