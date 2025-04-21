@@ -27,7 +27,7 @@ gem "nokogiri"
 gem "searchkick"
 gem "elasticsearch", "~> 7"
 
-gem "bootstrap", "~> 5.3.0"
+gem "bootstrap", "~> 5.3.5"
 gem "sassc-rails"
 gem "font-awesome-sass"
 gem "simple_form"
