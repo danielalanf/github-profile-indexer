@@ -1,10 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 - [Github Profile Indexer](#github-profile-indexer)
   - [Requisitos do Projeto](#requisitos-do-projeto)
   - [Pré-Requisitos](#pré-requisitos)
@@ -26,8 +21,6 @@ Things you may want to cover:
 ### Github Profile Indexer
 
 Esse projeto é um webscraper em Ruby on Rails que completa as informações de um perfil do GitHub a partir da URL do usuário.
-
-Desenvolvido para um teste técnico da empresa Fretadão.
 
 ### Requisitos do Projeto
 
